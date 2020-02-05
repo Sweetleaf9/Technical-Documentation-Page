@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Technical Doc Page</title>
+</head>
+<body>
+<nav id="navbar">
+    <ul class="navbar-elm">
+        <header class="navbar-header">Basic CSS</header>
+           <hr> 
+            <section id="main-section">
+                <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            </section>
+            <hr>
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#css_selectors_and_classes">CSS Selectors and Classes</a></li>
+            </section>
+            <hr>
+            
+            <section id="main-section">
+                <li><a class="nav-link" href="#set_the_id_of_an_element">Set the id of an Element</a></li>
+            </section>
+            <hr>
+            
+            <section id="main-section">
+                <li><a class="nav-link" href="#what_you_should_know">What You Should Know</a></li>
+            </section>
+            <hr>
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#change_the_color_of_text">Change the Color of Text</a></li>
+            </section>
+            <hr>
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#change_the_font_size_of_an_element">Change the Font Size of an Element</a></li>
+            </section>
+            <hr>
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#set_the_font_family_of_an_element">Set the Font Family of an Element</a></li>
+            </section>
+            <hr>
+    
+            <section id="main-section">
+                <li><a class="nav-link" href="#size_your_images">Size Your Images</a></li>
+            </section>
+            <hr>
+            
+            
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#control_the_space_around_an_element">Control the Space around an Element</a></li>
+            </section>
+            <hr>
+
+            <section id="main-section">
+                <li><a class="nav-link" href="#css_variables">CSS Variables</a></li>
+            </section>
+            
+    </ul>
+
+</nav>
+<br>
+
+<main id="main-doc">
+    <section id="introduction" class="main-section">
+        <header>Introduction</header>
+            <p>Cascading Style Sheets (CSS) tell the browser how to display the text and other content that you write in HTML.</p>
+            
+            <p>Note that CSS is case-sensitive so be careful with your capitalization. CSS has been adopted by all major browsers and allows you to control:</p>
+            
+            <ul>
+                <li>Color</li>
+                <li>Fonts</li>
+                <li>Positioning</li>
+                <li>Spacing</li>
+                <li>Sizing</li>
+                <li>Decorations</li>
+                <li>Transitions</li>
+            </ul>
+    
+        </section>
+        <br>
+        <hr class="hr">
+    
+    <section id="what_you_should_know" class="main-section">
+        <header>What You Should Know</header>
+            
+            <p>There are three main ways to apply CSS styling.</p>
+            
+            <ul>
+                <li>You can apply <em><strong>inline</em></strong> styles directly to HTML elements with the style attribute.</li><br>
+                <li>You can place CSS rules within style tags in an HTML document.</li>
+                <br>
+                <li>You can write CSS rules in an external style sheet, then reference that file in the HTML document.</li>
+            </ul>
+            
+    
+    </section>
+    <br>
+    <hr class="hr">
+
+    
+    <section id="css_selectors_and_classes" class="main-section">
+        <header>CSS Selectors and Classes</header>
+            <p><em><strong>CSS Selectors</strong></em> are used to style individual elements. We begin by creating a style block at the top of your code like this:</p>
+                <ul>
+                    <li><code>< style > < / style ></code></li>
+                </ul>
+            
+            <p>Inside that style block, you can create a CSS selector for all specific elements. 
+                For example, if you wanted all h2 elements to be red, you would add a style rule that looks like this:<p>
+                <ul>
+                    <li><code> h2 {color: red;}</code></li>
+                </ul>
+            
+            <p>Note that it's important to have both opening and closing curly braces (<strong>{</strong> and <strong>}</strong>) around each element's style rule(s). 
+                You also need to make sure that your element's style definition is between the opening and closing style tags. 
+                Finally, be sure to add a semicolon to the end of each of your element's style rules.<p>
+            
+            <p>Classes are reusable styles that can be added to HTML elements.<p>
+               <ul>
+                    <li><code>< style >.blue-text { color: blue;}< /style ></code></li>
+               </ul>
+           
+            <p>You can see that we've created a CSS class called <em><strong>blue-text</strong></em> within the style tag. 
+                You can apply a class to an HTML element like this:</p>
+                <ul>
+                    <li><code>< h2 class="blue-text" >CatPhotoApp< /h2 ></code></li>
+                </ul>
+            
+            <p>You can apply multiple classes to an element using its <em><strong>class</strong></em> attribute, by separating each class name with a space. For example:</p>
+                <ul>
+                    <li><code>< img class="class1 class2" ></code></li>
+                </ul>
+            
+            <p>Note that in your CSS style element, class names start with a period. 
+                In your HTML elements' class attribute, the class name does not include the period.</p>
+                  
+    
+    </section><br>
+    <hr class="hr">
+    
+    <section id="set_the_id_of_an_element" class="main-section">
+        <header>Set the id of an Element</header>
+            
+            <p>In addition to classes, each HTML element can also have an <em><strong>id</strong></em> attribute. 
+                There are several benefits to using <em><strong>id</strong></em> attributes:</p>
+            
+            <p>You can use an <em><strong>id</strong></em> to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.
+                <em><strong>id</strong></em> attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same id attribute.
+            
+            <p>Here's an example of how you give an element the id of <em><strong>cat-photo-app</strong></em>:    
+                <ul>
+                    <li><code>< h2 id="cat-photo-app"></code></li>
+                </ul>
+    
+    </section><br>
+    <hr class="hr">
+    
+    <section id="change_the_color_of_text" class="main-section">
+        <header>Change the Color of Text</header>
+            <p>The property that is responsible for the color of an element's text is the <em><strong>color</em></strong> style property.<p>
+            
+            <p>We can change the color text by using <em><strong>inline style declarations.</em></strong></p>
+            <ul>
+                <li><code> < h2 style="color: blue;">CatPhotoApp< /h2 ></code></li>
+            </ul>
+            
+            <p>We can also change the color by placing the CSS rules within <em><strong>style</strong></em> tags at the top of your code.</p>
+            
+            <p>Inside the style block, you can create a <em><strong>CSS selector</em></strong> for all specific elements you wish to change. For example, if you wanted all <em><strong>h2</em></strong> elements to be red, you would add a style rule that looks like this:
+            <ul>     
+                <li><code>h2 {color: red;}</code></li>
+            </ul>
+            
+    
+    </section>
+    <br>
+    <hr class="hr">
+
+    <section id="change_the_font_size_of_an_element" class="main-section">
+        <header>Change the Font Size of an Element</header>
+            
+            <p>Font size is controlled by the <em><strong>font-size</em></strong> CSS property.</p>
+                <ul>
+                    <li> <code>h1 {font-size: 30px;}</code></li>
+                </ul>
+
+    </section><br>
+    <hr class="hr">
+
+    <section id="set_the_font_family_of_an_element" class="main-section">
+        <header>Set the Font Family of an Element</header>
+            
+            <p>You can set which font an element should use, by using the <em><strong>font-family</em></strong> property.</p>
+           
+            <p>For example, if you wanted to set your h2 element's font to sans-serif, you would use the following CSS:</p>
+                <ul>
+                    <li><code>h2 {font-family: sans-serif;}</code></li>
+                </ul>      
+            
+    </section><br>
+    <hr class="hr">
+    
+    <section id="size_your_images" class="main-section">
+        <header>Size Your Images</header>
+            
+            <p>CSS has a property called <strong><em>width</strong></em> that controls an element's width. Just like with fonts, we'll use <em><strong>px</strong></em> (pixels) to specify the image's width.
+                For example, if we wanted to create a CSS class called <em><strong>larger-image</em></strong> that gave HTML elements a width of 500 pixels, we'd use:<p>
+                <ul>
+                    <li><code>.larger-image { width: 500px;}</code></li>
+                </ul>
+    
+    </section><br>
+    <hr class="hr">
+
+    <section id="control_the_space_around_an_element" class="main-section">
+        <header>Control the Space around an Element</header>
+            <p>Three important properties control the space that surrounds each HTML element: <em><strong>padding</em></strong>, <em><strong>margin</em></strong>, and <em><strong>border</em></strong>.</p>
+            
+            <p>An element's <em><strong>padding</em></strong> controls the amount of space between the element's content and its <em><strong>border</em></strong></p>
+            
+            <p>When you increase an element's <em><strong>padding</em></strong>, it will increase the distance (<em><strong>padding</em></strong>) between the text and the border around it.</p>
+                <ul>
+                    <li><code>.yellow-box {padding:10px;}</code></li>
+                </ul>
+            
+            <p>An element's <em><strong>margin</em></strong> controls the amount of space between an element's <em><strong>border</em></strong> and surrounding elements.</p>
+            
+            <p>When you increase an element's <em><strong>margin</em></strong>, it will increase the distance between its <em><strong>border</em></strong> and surrounding elements.</p>
+                <ul>
+                    <li><code>.yellow-box {margin:10px;}</code></li>
+                </ul>
+            
+            <p>CSS borders have properties like <em><strong>style</em></strong>, <em><strong>color</em></strong> and <em><strong>width</em></strong>.</p>
+            
+            <p>For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:</p>
+                <ul>
+                <li><code>body {border-color: red; border-width: 5px; border-style: solid;}</code></li>
+                </ul>
+    </section><br>
+    <hr class="hr">
+
+    <section id="css_variables" class="main-section">
+        <header>CSS Variables</header>
+            
+            <p>CSS <em><strong>Variables</em></strong> are a powerful way to change many CSS style properties at once by changing only one value.</p>
+            
+            <p>To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this:</p>
+                <ul>
+                    <li><code>--penguin-skin: gray;</code></li>
+                </ul>  
+
+            <p>This will create a variable named <em><strong>--penguin-skin</em></strong> and assign it the value of gray. 
+                Now you can use that variable elsewhere in your CSS to change the value of other elements to <em><strong>gray</em></strong>.</p>
+            
+            <p>After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it.</p>
+            <ul>
+                <li><code>background: var(--penguin-skin);</code></li>
+            </ul>
+
+            <p>This will change the background of whatever element you are targeting to gray because that is the value of the <em><strong>--penguin-skin</em></strong> variable. 
+                Note that styles will not be applied unless the variable names are an exact match.</p>
+
+
+
+    </section><br>
+    <hr class="hr">
+
+
+
+
+
+
+</main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
